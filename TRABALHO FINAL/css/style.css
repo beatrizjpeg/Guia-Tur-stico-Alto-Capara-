@@ -1,0 +1,1145 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAFAF7;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+/*header*/
+header{
+    background: linear-gradient( 90deg, #0D4D2A, #0f5b2f, #0D4D2A );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
+}
+
+.logo{
+    height: 70px;
+}
+
+/*nav*/
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.menu a{
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.menu a:hover{
+    color:#6df44f;
+}
+
+/*hero*/
+.hero{
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    z-index: 2;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    max-width: 800px;
+    padding: 0;
+}
+
+.descubra{
+    display: block;
+    font-family: 'Alex Brush', cursive;
+    font-size: 2.5rem;
+    color: #7DC95A;
+    margin-bottom: -30px;
+}
+
+.hero h1{
+    font-size: 5rem;
+    margin-bottom: 15px;
+}
+
+.hero p{
+    font-size: 1rem;
+    margin-bottom: 35px;
+}
+
+.btn{
+    display: inline-block;
+    background: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;    
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.btn:hover{
+    background-color: #287007;
+}
+
+/*sobre*/
+.sobre{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    padding: 70px 8%;
+}
+
+.subtitulo-sobre{
+    color: #4CAF50;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.sobre h2{
+    font-size: 3rem;
+    color: #123D23;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.linha{
+    width: 70px;
+    height: 4px;
+    background: #4CAF50;
+    margin-bottom: 25px;
+}
+
+.sobre p{
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: #555;
+}
+
+.btn-sobre{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 30px;
+    background: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.btn-sobre:hover{
+    background-color: #287007;
+}
+.sobre-imagem img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/*destaques*/
+.destaques{
+    background: #EEF2EA;
+    padding: 70px 8%;
+}
+
+.cabecalho-destaque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.titulo-secao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.titulo-secao h2{
+    font-size: 2.3rem;
+    color: #123D23;
+    margin: 0;
+}
+
+.icon-secao{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.linha-destaque{
+    width: 70px;
+    height: 4px;
+    background: #4CAF50;
+    border-radius: 10px;
+    margin-top: 0px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+.card{
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.icone{
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border: 3px solid #4CAF50;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 185px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone img{
+    width: 79px;
+    height: 79px;
+    object-fit: contain;
+}
+
+.card h3{
+    margin-top: 55px;
+    color: #123D23;
+    font-size: 1.3rem;
+    padding: 10px 15px;
+}
+
+.card p{
+    color: #555;
+    line-height: 1.6;
+    padding: 0 20px 25px;
+    font-size: .95rem;
+}
+
+/*informações*/
+.informacoes{
+    padding: 80px 8%;
+    background: #FAFAF7;
+}
+
+.info-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.info-gerais h2, .curiosidades h2{
+    color: #123D23;
+    font-size: 2rem;
+}
+
+/*tabela*/
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead{
+    background: #2F6B2F;
+    color: #fff;
+}
+
+th,
+td{
+    padding: 14px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+tbody tr:nth-child(even){
+    background: #f8f8f8;
+}
+
+/*curiosidades*/
+.curiosidades ul{
+    list-style: none;
+}
+
+.curiosidades li{
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.curiosidades li::before{
+    content: "●";
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+}
+
+.icone-informacoes,
+.icone-curiosidade{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.icone-informacoes h2,
+.icone-curiosidade h2{
+    margin: 0;
+    color: #123D23;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.icon-livro,
+.icon-lampada{
+    width: 45px;
+    height: 35px;
+    object-fit: contain;
+    display: block;
+}
+
+/*planeje*/
+.planeje{
+    background: #FFF4EA;
+    padding: 70px 8%;
+}
+
+.planeje-container{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.2fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.planeje-texto h2{
+    color: #123D23;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.planeje-texto p{
+    color: #555;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.planeje-imagem img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.planeje-formulario form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.linha-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.planeje-formulario input,
+.planeje-formulario select,
+.planeje-formulario textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: .95rem;
+}
+
+.planeje-formulario textarea{
+    height: 110px;
+    resize: none;
+}
+
+.planeje-formulario button{
+    background: #2F6B2F;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.planeje-formulario button:hover{
+    background: #1d4e1d;
+}
+
+/* footer */
+.footer{
+    background: linear-gradient(90deg, #0D4D2A, #0f5b2f, #0D4D2A);
+    color: #fff;
+    padding: 50px 8% 30px;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.footer-logo img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-logo p{
+    font-size: .85rem;
+    color: rgba(255,255,255,.8);
+    line-height: 1.6;
+}
+
+.footer-links h3,
+.footer-social h3{
+    margin-bottom: 18px;
+    font-size: 1.2rem;
+}
+
+.footer-links ul{
+    list-style: none;
+}
+
+.footer-links li{
+    margin-bottom: 10px;
+}
+
+.footer-links a{
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-links a:hover{
+    color: #7DC95A;
+}
+
+.social-icons{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icons img{
+    width: 36px;
+    height: 36px;
+    transition: .3s;
+}
+
+.social-icons img:hover{
+    transform: translateY(-3px);
+}
+
+.footer-frase{
+    color: rgba(255,255,255,.85);
+    line-height: 1.6;
+    font-size: .9rem;
+}
+
+.footer-logo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo-footer{
+    width: 250px;
+    height: auto;
+}
+
+/* pagina ponto turistico */
+
+/* hero */
+.hero-turismo{
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+}
+
+.hero-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+}
+
+.hero-conteudo{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8%;
+    max-width: 650px;
+    color: #fff;
+}
+
+.hero-conteudo h1{
+    font-size: 3rem;
+    margin-bottom: 0px;
+}
+
+.hero-conteudo p{
+    font-size: 1.0rem;
+    line-height: 1.8;
+}
+
+.linha{
+    width: 70px;
+    height: 4px;
+    background: #7DC95A;
+    margin-bottom: 25px;
+}
+
+.onda{
+    position:absolute;
+    bottom:-90px;
+    left:-10%;
+    width:120%;
+    height:140px;
+    background:#FAFAF7;
+    border-radius:100% 100% 0 0;
+    z-index:2;
+}
+
+/* lugares */
+.lugares{
+    padding: 90px 8%;
+    background: #FAFAF7;
+    text-align: center;
+}
+
+.lugares-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.lugar-card{
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.lugar-card:hover{
+    transform: translateY(-5px);
+}
+
+.lugar-card img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.lugar-card h3{
+    color: #123D23;
+    font-size: 1.4rem;
+    margin: 20px 15px 10px;
+}
+
+.lugar-card p{
+    color: #666;
+    line-height: 1.7;
+    padding: 0 20px 25px;
+}
+
+.lugar-card a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .95rem;
+    margin-bottom: 25px;
+    transition: .3s;
+}
+
+.lugar-card a::after{
+    content: "→";
+    transition: .3s;
+}
+
+.lugar-card a:hover{
+    color: #123D23;
+}
+
+.lugar-card a:hover::after{
+    transform: translateX(5px);
+}
+
+.subtitulo-secao{
+    color: #4CAF50;
+}
+
+/*pagina gastronomia*/
+.hero-gastronomia{
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+}
+
+.hero-gastronomia .hero-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-gastronomia .overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.50);
+    z-index: 1;
+}
+
+.hero-conteudo{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 650px;
+    padding-left: 8%;
+    color: #fff;
+}
+
+.hero-conteudo h1{
+    font-size: 3rem;
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+}
+
+.hero-conteudo p{
+    font-size: 1.0rem;
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+.hero-conteudo .linha{
+    width: 70px;
+    height: 4px;
+    background: #7DC95A;
+    margin-bottom: 30px;
+}
+
+.onda{
+    position: absolute;
+    bottom: -70px;
+    left: -5%;
+    width: 110%;
+    height: 140px;
+    background: #FAFAF7;
+    border-radius: 100% 100% 0 0;
+    z-index: 2;
+}
+
+/*sabores*/
+.sabores{
+    padding: 90px 8%;
+    text-align: center;
+    background: #FAFAF7;
+}
+
+.subtitulo-secao{
+    color: #7DC95A;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.titulo-secao{
+    font-size: 3rem;
+    color: #123D23;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.linha-centro{
+    width: 70px;
+    height: 4px;
+    background: #7DC95A;
+    margin: 0 auto 50px;
+}
+
+.sabores-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+.sabor-card{
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.sabor-card:hover{
+    transform: translateY(-6px);
+}
+
+.sabor-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.icone-sabor{
+    width: 72px;
+    height: 72px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 185px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-sabor img{
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+}
+
+.sabor-card h3{
+    margin-top: 55px;
+    color: #123D23;
+    font-size: 1.5rem;
+    padding: 0 15px;
+}
+
+.sabor-card p{
+    padding: 15px 20px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.sabor-card a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #7DC95A;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.sabor-card a::after{
+    content: "→";
+}
+
+/*onde saborear*/
+.onde-saborear{
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 60px;
+    align-items: start;
+}
+
+.onde-texto{
+    position: sticky;
+    top: 100px;
+}
+
+.onde-texto h2{
+    font-size: 3rem;
+    color: #123D23;
+    margin: 10px 0 20px;
+}
+
+.onde-texto p{
+    line-height: 1.8;
+    color: #555;
+}
+
+.onde-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card-sabor{
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.card-sabor:hover{
+    transform: translateY(-5px);
+}
+
+.card-sabor img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-info{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-info h3{
+    color: #123D23;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.card-info p{
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.card-info a{
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card-info a::after{
+    content: " →";
+}
+
+/*pagina contato*/
+
+.hero-contato{
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+}
+
+.hero-contato .hero-img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-contato .overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    z-index: 2;
+}
+
+.hero-contato .hero-conteudo{
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8%;
+    max-width: 650px;
+    color: #fff;
+}
+
+.hero-contato .hero-conteudo h1{
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-contato .hero-conteudo p{
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.hero-contato .linha{
+    width: 70px;
+    height: 4px;
+    background: #7DC95A;
+    margin-bottom: 25px;
+}
+
+.hero-contato .onda{
+    position: absolute;
+    bottom: -70px;
+    left: -5%;
+    width: 110%;
+    height: 140px;
+    background: #FAFAF7;
+    border-radius: 100% 100% 0 0;
+    z-index: 3;
+}
+
+/*fale conosco*/
+/* CONTATO CARDS */
+
+.contato-cards{
+    padding: 90px 8%;
+    text-align: center;
+    background: #FAFAF7;
+}
+
+.cards-contato{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.card-contato{
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.card-contato:hover{
+    transform: translateY(-6px);
+}
+
+.card-contato img{
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.card-contato h3{
+    color: #123D23;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+.card-contato p{
+    color: #666;
+    line-height: 1.7;
+}
+
+/*form*/
+.mensagem-localizacao{
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: #EEF2EA;
+}
+
+.formulario-contato,
+.onde-estamos{
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.formulario-contato h2,
+.onde-estamos h2{
+    color: #123D23;
+    font-size: 2.5rem;
+    margin: 10px 0 15px;
+}
+
+.linha-verde{
+    width: 70px;
+    height: 4px;
+    background: #4CAF50;
+    margin-bottom: 30px;
+}
+
+.formulario-contato form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-contato input,
+.formulario-contato textarea{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.formulario-contato textarea{
+    height: 180px;
+    resize: none;
+}
+
+.formulario-contato button{
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.formulario-contato button:hover{
+    background: #287007;
+}
+
+.onde-estamos img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.endereco-box h3{
+    color: #123D23;
+    margin-bottom: 10px;
+}
+
+.endereco-box p{
+    color: #555;
+    line-height: 1.8;
+}
+
+/* informacoes uteis */
+.informacoes-uteis{
+    padding: 90px 8%;
+    text-align: center;
+    background: #FAFAF7;
+}
+
+.uteis-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.util-card{
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.util-card:hover{
+    transform: translateY(-6px);
+}
+
+.util-card img{
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.util-card h3{
+    color: #123D23;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.util-card p{
+    color: #666;
+    line-height: 1.8;
+}
